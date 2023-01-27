@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Meldpunt.Views.VoorbeeldPage"
+    xmlns:viewmodel="clr-namespace:Meldpunt.ViewModels"
+    Title="Voorbeeld">
+    <ContentPage.Content>
+        <Grid RowDefinitions="Auto, *" Padding="20,10,20,0" RowSpacing="10">
+            <StackLayout Grid.Row="1">
+                <Label Text="Naam" />
+                <Entry Text="{Binding Naam}" />
+                <Label Text="Geboortedatum" />
+                <DatePicker Date="{Binding Geboortedatum}"  Format="D"/>
+                <Label Text="Beschrijving" />
+                <StackLayout BackgroundColor="Gray" Padding="1">
+                    <Editor Text="{Binding Beschrijving}"  BackgroundColor="White" />
+                </StackLayout>
+                <Label Text="Telefoonnummer" />
+                <Entry x:Name="telefoonnummerEntry" Keyboard="Telephone" Text="{Binding Telefoonnummer}"/>
+
+                <Button Text="Toevoegen" Command="{Binding AddCommand}"/>
+            </StackLayout>
+        </Grid>
+
+
+    </ContentPage.Content>
+</ContentPage>
+

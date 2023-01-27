@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Meldpunt.Views.ItemDetailPage"
+    Title="{Binding Item.Naam}">
+    <ContentPage.Content>
+        <StackLayout Padding="20,10,20,0">
+            <Label Text="Naam" />
+            <Entry Text="{Binding Item.Naam}" IsEnabled="False"/>
+            <Label Text="Geboortedatum" />
+            <DatePicker Date="{Binding Item.Geboortedatum}"  Format="D" IsEnabled="False"/>
+            <Label Text="Beschrijving" />
+            <Editor Text="{Binding Item.Beschrijving}" IsEnabled="False"/>
+            <Label Text="Telefoonnummer" />
+            <Entry x:Name="telefoonnummerEntry" Keyboard="Telephone" Text="{Binding Item.Telefoonnummer}" IsEnabled="False"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+
